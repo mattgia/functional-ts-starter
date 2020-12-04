@@ -1,25 +1,30 @@
 module.exports = {
     env: {
-        browser: true,
+        browser: false,
         es2021: true,
+        node: true,
     },
     extends: [
-        "prettier",
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
+        'eslint:recommended',
+        'plugin:@typescript-eslint/recommended',
     ],
+    ignorePatterns: ['dist/*'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 12,
         sourceType: 'module',
     },
-    plugins: ['prettier', '@typescript-eslint'],
+    plugins: [
+        '@typescript-eslint',
+        'sort-keys-fix',
+        'json-format'
+    ],
     rules: {
-        "prettier/prettier": ['error'],
-        "sort-keys": ['error', 'asc', { caseSensitive: true, natural: false }],
         indent: ['error', 4],
-        "linebreak-style": ['error', 'unix'],
+        'linebreak-style': ['error', 'unix'],
         quotes: ['error', 'single'],
         semi: ['error', 'never'],
+        'sort-keys': ['error', 'asc', { caseSensitive: true, natural: false }],
+        'sort-keys-fix/sort-keys-fix': 'warn',
     },
 }
