@@ -6,7 +6,7 @@
   "author": "",
   "main": "index.js",
   "scripts": {
-    "compile:": "tsc",
+    "compile": "tsc",
     "compile:watch": "tsc:watch",
     "lint": "eslint --ext .json --ext .js --ext .ts .",
     "lint:fix": "npm run lint -- --fix",

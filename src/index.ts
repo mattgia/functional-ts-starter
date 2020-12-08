@@ -3,8 +3,6 @@ import Express from 'express'
 
 const app: Express.Application = Express()
 
-app.get('/test', (req, res) => {
-    res.send({})
-})
-
-app.listen(3000)
+export default app.get('/test', (req, res) => {
+    return res.send({})
+}).listen(3000)
