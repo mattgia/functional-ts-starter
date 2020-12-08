@@ -1,3 +1,5 @@
+/* eslint-disable functional/no-expression-statement */
+/* eslint-disable functional/immutable-data */
 module.exports = {
     env: {
         browser: false,
@@ -7,15 +9,22 @@ module.exports = {
     extends: [
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        'plugin:functional/external-recommended',
+        'plugin:functional/recommended'
     ],
     ignorePatterns: ['dist/*'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 12,
+        project: './tsconfig.json',
         sourceType: 'module',
     },
     plugins: [
         '@typescript-eslint',
+        'functional',
         'sort-keys-fix',
         'json-format'
     ],
