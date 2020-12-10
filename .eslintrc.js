@@ -15,7 +15,7 @@ module.exports = {
         'plugin:functional/external-recommended',
         'plugin:functional/recommended'
     ],
-    ignorePatterns: ['dist/*'],
+    ignorePatterns: ['dist/*', '.eslint.rc', 'jest.config.js'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 12,
